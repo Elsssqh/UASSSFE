@@ -10,13 +10,15 @@
 
 a {
     text-decoration: none;
+
 }
 
 :root {
     --bg-color: rgb(216, 154, 203);
     --second-bg-color: rgb(83, 11, 112);
     --text-color: rgb(0, 0, 0);
-    --main-color: rgb(90, 11, 59);
+    --main-color: rgb(121, 24, 82);
+    --apalah-color: rgb(255, 255, 255);
     --big-font: 5rem;
     --h2-font: 3rem;
     --p-font: 1.1rem;
@@ -31,11 +33,18 @@ span {
     color: var(--main-color);
 }
 
+span2 {
+    color: var(--apalah-color);
+}
+
 /* Landing Page */
 section.landing {
-    background-image: url(../../assets/bg.png);
+    /* Background Image */
+    background-image: url(asset/background.jpg);
     background-size: cover;
     height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(asset/background.jpg);
+    
 
     display: flex;
     justify-content: center;
@@ -46,7 +55,7 @@ section.landing {
 .landing-img img {
     max-width: 460px;
     height: auto;
-    width: 100%;
+    width: 110%;
 }
 
 .landing-text {
@@ -103,14 +112,16 @@ header.sticky {
     justify-content: space-between;
     align-items: center;
     z-index: 100;
+    padding: 1.2rem;
+    overflow: hidden;
 
-    background: var(--bg-color);
-    border-bottom: 1px solid rgba(211, 211, 211, 0.274);
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), linear-gradient(to top, var(--bg-color) 1%, var(--main-color) 200%);
     transition: all .45s ease;
 }
 
 .logo img {
-    width: 47px;
+    padding-top: 12 ;
+    width: 100px;
     height: auto;
 }
 
@@ -126,12 +137,13 @@ header.sticky {
 .navlist {
     display: flex;
     justify-content: space-between;
+    padding-top: 12 ;
     align-items: center;
     width: 500px;
 }
 
 .navlist a {
-    color: var(--second-color);
+    color: var(--apalah-color);
     font-size: 1.2rem;
     font-weight: 500;
     transition: all .3s ease;
@@ -142,14 +154,9 @@ header.sticky {
     color: var(--main-color);
 }
 
-.hamburger {
-    display: none;
-}
-
 .hamburger i {
     font-size: 1.7rem;
 }
-
 
 @media only screen and (max-width: 1320px) {
     header.sticky {
@@ -205,4 +212,12 @@ header.sticky {
     }
 }
 
+/* Footer */
+footer {
+    color: var(--text);
+    text-align: center;
+    padding: 1.2rem;
+    overflow: hidden;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), linear-gradient(to bottom, var(--bg-color) 1%, var(--main-color) 200%);
+}
 
