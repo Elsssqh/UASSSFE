@@ -1,0 +1,56 @@
+section.landing {
+    background-image: url(asset/bg.jpeg);
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+.landing-img img {
+    max-width: 460px;
+    height: auto;
+    width: 100%;
+}
+
+.landing-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+.landing-text h2 {
+    font-size: 4rem;
+    line-height: 1;
+}
+
+.landing-text p {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--text-color);
+    line-height: 2.5rem;
+}
+
+.button {
+    background: var(--main-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+.button a {
+    color: var(--bg-color);
+    letter-spacing: 1.2px;
+    font-weight: 800;
+    transition: all .3s ease;
+}
+
+.btn:hover {
+    transform: scale(0.9);
+}
