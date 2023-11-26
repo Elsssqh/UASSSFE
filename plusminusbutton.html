@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plus Minus Buttons</title>
+    <style>
+        .counter {
+            border: 1px solid black;
+            display: inline-block;
+            font-size: 20px;
+            margin: 0 10px;
+        }
+        button {
+            background-color: white;
+            border: none;
+            font-size: 18px;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="counter">
+        <button id="decrement">-</button>
+        <span id="count">0</span>
+        <button id="increment">+</button>
+    </div>
+
+    <script>
+        // Get the HTML elements
+        const decrementButton = document.getElementById('decrement');
+        const incrementButton = document.getElementById('increment');
+        const countSpan = document.getElementById('count');
+
+        // Initial count value
+        let count = 1;
+
+        // Update the count value and display it
+        function updateCount() {
+            countSpan.textContent = count;
+        }
+
+        // Add event listeners to the buttons
+        decrementButton.addEventListener('click', () => {
+            if (count > 1) {
+                count--;
+                updateCount();
+            }
+        });
+
+        incrementButton.addEventListener('click', () => {
+            count++;
+            updateCount();
+        });
+
+        // Initial display
+        updateCount();
+    </script>
+</body>
+</html>
