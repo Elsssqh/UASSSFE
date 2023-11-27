@@ -1,19 +1,79 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600&family=Roboto:wght@100&display=swap');
+/*----FONT---*/
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
 
-:root{
-    --main-color: #fcb7a4;
-    --white: #fcf8f8;
-    --background : #c18957;
-    border: .1rem solid rgb(251, 235, 217)
+* {
+    list-style: none;
+    text-decoration: none;
 }
 
-*{
-    font-family: 'Roboto', sans-serif;
-    margin: 0; padding: 0;
-    box-sizing: border-box;
-    outline: none;
-    border: none;
-    text-decoration: none;
-    text-transform: capitalize;
-    transition: .2s linear;
+:root {
+    --header-height: 3rem;
+
+    /*===== Color Palette =====*/
+    --first-color: rgb(246, 164, 252);
+    --second-color: #c157aa;
+    --third-color: #a83e91; 
+    --white-color: #FCF8F8;
+    
+    /*===== Font and typography =====*/
+    --big-font: 'Courgette';
+    --head-font: 'sans-serif';
+    --big-font-size: 2.5rem;
+    --normal-font-size: .938rem;
+}
+
+body {
+    background-image: url('asset/background\ \(2\).jpg');
+    background-repeat: no-repeat;
+    background-position: right top;
+    color: var(--white-color);
+}
+section{
+    padding: 2rem 7%;
+}
+
+.heading{
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    padding-bottom: 3.5rem;
+    font-size: 4rem;
+}
+
+.heading span{
+    color: var(black);
+    text-transform: uppercase;
+}
+
+.about .row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.about .row .content{
+    flex: 1 1 45rem;
+    padding: 2rem;
+}
+
+.about .row .content h3{
+    font-size: 3rem;
+    color: #fff
+}
+
+.about .row .content p{
+    font-size: 1.6rem;
+    color: #fff;
+    padding: 1rem 0;
+    line-height: 1.8;
+}
+
+.btn{
+    margin-top: 1rem;
+    display: inline-block;
+    padding: .9rem 3rem;
+    font-size: 1.7rem;
+    color: #fff;
+    background-color: #d98c76;
+    cursor: pointer;
 }
