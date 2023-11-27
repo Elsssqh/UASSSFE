@@ -31,8 +31,16 @@ body {
 
 h1 {
     font-family: 'Courgette', sans-serif;
-    padding-left: 15rem;
+    text-align: center; /* Center the text horizontally */
     padding-top: 10rem;
+    color: var(--white-color);
+}
+
+.p {
+    font-family: sans-serif;
+    text-align: center; /* Center the text horizontally */
+    padding-top: 20rem;
+    padding-left: 0; /* Adjusted the padding-left to center the paragraph */
     color: var(--white-color);
 }
 
@@ -45,32 +53,57 @@ h1 {
 .navbar-brand {
     font-family: 'Courgette', sans-serif;
     color: var(--white-color);
-    margin: 0 10px; /* Add margin to create spacing between navbar buttons */
+    margin: 0 20px; 
 }
 
 .navbar-brand:hover {
-    border: 2px solid var(--white-color);
+    border: 2px solid transparent;
     border-radius: 20px;
     color: var(--white-color);
-    transform: scale(1.1); /* Enlarge the button on hover */
-    transition: transform 0.3s ease; /* Add a smooth transition effect */
+    transform: scale(1.1); 
+    transition: transform 0.3s ease; 
 }
 
 .navbar-nav {
     font-family: 'Courgette', sans-serif;
     color: var(--white-color);
-    background-color: rgba(255, 255, 255, 0.3); /* Set the initial background color to transparent white (30% opacity) */
-    border: 2px solid transparent; /* Add a default transparent outline */
+    background-color: rgba(255, 255, 255, 0.3); 
+    border: 2px solid transparent; 
     border-radius: 50px;
-    transition: background-color 0.3s ease; /* Add a smooth transition effect for the background color */
+    transition: background-color 0.3s ease; 
 }
 
 .navbar-nav:hover {
-    background-color: var(--white-color); /* Set the background color to opaque white on hover */
     border: 2px solid var(--white-color); 
-    border-radius: 50px; /* Ensure border-radius is set in both normal and hover states */
+    border-radius: 50px;
 }
 
 .nav-item {
     color: var(--white-color);
+    margin : 0 20px;
+   
 }
+
+.nav-item:hover{
+    background-color: rgba(255, 255, 255, 0.3); 
+    transition: background-color 0.3s ease; 
+    border :2.5px solid var(--white-color);
+    border-radius: 50px;
+    margin-left: 20px;
+    
+}
+
+
+.nav-item.middleboo {
+    color: var(--white-color);
+    background-color: rgba(255, 255, 255, 0.3); 
+    border: 2.5px solid var(--white-color);
+    border-radius: 50px;
+    margin-left: 20px;
+}
+
+
+
+
+
+
