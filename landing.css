@@ -1,20 +1,17 @@
 
-/* Landing Page */
 section.landing {
-    /* Background Image */
-    background-image: url(asset/background.jpg);
-    background-size: cover;
-    height: 125vh;
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(asset/background.jpg);
-    background-repeat:no-repeat ;
-    background-position: right top; 
-    
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 100vh;
 
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 3rem;
 }
+
 
 .landing-img img {
     max-width: 460px;
