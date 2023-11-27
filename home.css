@@ -14,7 +14,7 @@
     --second-color: #c18957;
     --third-color: #a86f3e; 
     --white-color: #FCF8F8;
-
+    
     /*===== Font and typography =====*/
     --big-font: 'Courgette';
     --head-font: 'sans-serif';
@@ -23,7 +23,7 @@
 }
 
 body {
-    background-image: url('asset/abstract-gradient-neon-lights.jpg');
+    background-image: url('asset/background\ \(2\).jpg');
     background-repeat: no-repeat;
     background-position: right top;
     color: var(--white-color);
@@ -33,76 +33,45 @@ h1 {
     font-family: 'Courgette', sans-serif;
     padding-left: 15rem;
     padding-top: 10rem;
-}
-
-h2 {
-    font-family: 'Courgette', sans-serif;
-    padding-left: 1rem;
-    padding-top: 1rem;
-}
-
-header.sticky {
-    position: fixed;
-    width: 100%;
-    height: 60px;
-    padding: 0 100px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 100;
-    border-bottom: 1px solid rgba(211, 211, 211, 0.274);
-    transition: all .45s ease;
-}
-
-.navbar,
-.navlist {
-    padding: 0;
-    margin: 0;
+    color: var(--white-color);
 }
 
 .navbar {
-    height: 100%;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+    background-image: url('asset/background\ \(2\).jpg') !important;
+    background-repeat: no-repeat;
+    background-position: right top;
 }
-
-.navbar::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 20%;
-    width: 50%;
-    height: 90%;
-    border: 3px solid var(--second-color);
-    border-radius: 50px; /* Make it oval */
-    z-index: -1;
-}
-
-.navlist {
-    display: flex;
-    justify-content: space-between; /* Added space between each button */
-    align-items: center;
-    width: 500px;
-    margin-left: 25rem; /* Adjusted margin to add space between each button */
-}
-
-.navlist a {
+.navbar-brand {
+    font-family: 'Courgette', sans-serif;
     color: var(--white-color);
-    font-size: 1.2rem;
-    font-weight: 500;
-    transition: all .3s ease;
+    background-color: transparent; /* Set the initial background color to transparent */
+    border: 2px solid transparent; /* Add a default transparent outline */
 }
 
-.navlist a:hover,
-.navlist a.active {
-    color: var(--first-color);
+/* Set the background color of the button in the navbar */
+.navbar-brand:hover {
+    background-color: white;
+    border: 2px solid var(--white-color);
+    border-radius: 20px;
+    padding: 5px 15px; /* Adjust padding as needed */
 }
 
-.hamburger {
-    display: none;
+.navbar-nav {
+    font-family: 'Courgette', sans-serif;
+    color: var(--white-color);
+    background-color: transparent; /* Set the initial background color to transparent */
+    border: 2px solid white; 
+    border-radius: 50px;
+    justify-content: space-between;
 }
 
-.hamburger i {
-    font-size: 1.7rem;
+/* Set the background color of the navbar button when hovered */
+.navbar-nav:hover {
+    background-color: white;
+    border: 2px solid white;
+    border-radius: 50px;
+}
+
+.nav-item {
+    color: var(--white-color);
 }
