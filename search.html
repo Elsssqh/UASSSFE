@@ -4,12 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Bookstore</title>
+    <title>Search Books</title>
 </head>
 <body>
+    <h1><center>ng e-Asdos BookStore</center></h1>
+
     <div class="container">
-        <h1><center>ng e-Asdos BookStore</center></h1>
-        <center><input type="text" id="searchInput" placeholder="Search..."></center>
+        <form id="search-form">
+            <input type="text" id="search-input" placeholder="Search...">
+            <select id="category-select">
+                <option value="all">All</option>
+                <option value="title">Title</option>
+                <option value="genre">Genre</option>
+                <option value="author">Author</option>
+                <option value="publisher">Publisher</option>
+            </select>
+        </form>
         <br>
         <center><button onclick="searchBooks()">Search</button></center>
         <ul id="bookList">
