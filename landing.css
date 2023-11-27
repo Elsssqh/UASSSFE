@@ -1,50 +1,13 @@
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-    scroll-behavior: smooth;
-    list-style: none;
-    text-decoration: none;
-}
-
-a {
-    text-decoration: none;
-
-}
-
-:root {
-    --bg-color: rgb(216, 154, 203);
-    --second-bg-color: rgb(83, 11, 112);
-    --text-color: rgb(0, 0, 0);
-    --main-color: rgb(121, 24, 82);
-    --apalah-color: rgb(255, 255, 255);
-    --big-font: 5rem;
-    --h2-font: 3rem;
-    --p-font: 1.1rem;
-}
-
-body {
-    background: var(--bg-color);
-    color: var(--text-color);
-    background-image: url(asset/background.jpg);
-}
-
-span {
-    color: var(--main-color);
-}
-
-span2 {
-    color: var(--apalah-color);
-}
 
 /* Landing Page */
 section.landing {
     /* Background Image */
     background-image: url(asset/background.jpg);
     background-size: cover;
-    height: 100vh;
+    height: 125vh;
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(asset/background.jpg);
+    background-repeat:no-repeat ;
+    background-position: right top; 
     
 
     display: flex;
@@ -60,146 +23,20 @@ section.landing {
 }
 
 .button {
-    background: var(--main-color);
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 20px;
+    display: inline-block;
+    margin: 10px;
 }
 
-.button a {
-    color: var(--bg-color);
-    letter-spacing: 1.2px;
-    font-weight: 800;
-    transition: all .3s ease;
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    background-color: #e045ee; /* Warna latar belakang tombol */
+    color: #ffffff; /* Warna teks tombol */
+    border-radius: 5px; /* Sudut bulat */
+    transition: background-color 0.3s ease; /* Animasi perubahan warna latar belakang */
 }
 
 .btn:hover {
-    transform: scale(0.9);
-}
-
-/* Main */
-/* Header */
-header.sticky {
-    position: fixed;
-    width: 100%;
-    height: 60px;
-    padding: 0 100px;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 100;
-    padding: 1.2rem;
-    overflow: hidden;
-
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), linear-gradient(to top, var(--bg-color) 1%, var(--main-color) 200%);
-    transition: all .45s ease;
-}
-
-.logo img {
-    padding-top: 12 ;
-    width: 100px;
-    height: auto;
-}
-
-.navbar, .navlist {
-    padding: 0;
-    margin: 0;
-}
-
-.navbar {
-    height: 100%;
-}
-
-.navlist {
-    display: flex;
-    justify-content: space-between;
-    padding-top: 12 ;
-    align-items: center;
-    width: 500px;
-}
-
-.navlist a {
-    color: var(--apalah-color);
-    font-size: 1.2rem;
-    font-weight: 500;
-    transition: all .3s ease;
-}
-
-.navlist a:hover,
-.navlist a.active {
-    color: var(--main-color);
-}
-
-.hamburger i {
-    font-size: 1.7rem;
-}
-
-@media only screen and (max-width: 1320px) {
-    header.sticky {
-        padding: 0 50px;
-    }
-}
-
-@media only screen and (max-width: 900px) {
-    /* Navbar */
-    .hamburger {
-        display: block;
-        cursor: pointer;
-    }
-
-    .navbar {
-        position: absolute;
-        top: 57px;
-        left: 0;
-        right: 0;
-        height: 0;
-        width: 100vw;
-        background: var(--bg-color);
-        transition: 0.35s;
-        overflow: hidden;
-    }
-
-    .navbar.active {
-        height: 230px;
-    }
-
-    .navlist {
-        display: block;
-        width: fit-content;
-        margin: 10px auto 0 auto;
-        text-align: center;
-        align-items: center;
-        transition: 0.35s;
-        line-height: 2.5rem;
-    }
-
-    .navbar.active.navlist {
-        opacity: 100;
-    }
-
-    /* Member */
-    .member-content > table {
-        font-size: 1.3rem;
-    }
-
-    /* Profile */
-    .carousel-item {
-        flex: 0 0 50%;
-    }
-}
-
-/* Footer */
-footer {
-    color: var(--text);
-    text-align: center;
-    padding: 1.2rem;
-    overflow: hidden;
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), linear-gradient(to bottom, var(--bg-color) 1%, var(--main-color) 200%);
-}
-
+    background-color: rgb(211, 115, 196)( 41, 185); /* Warna latar belakang tombol saat dihover */
+};
