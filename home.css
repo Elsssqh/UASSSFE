@@ -28,7 +28,6 @@ body {
     background-position: right top;
     color: var(--white-color);
 }
-
 h1 {
     font-family: 'Courgette', sans-serif;
     text-align: center; /* Center the text horizontally */
@@ -39,8 +38,7 @@ h1 {
 .p {
     font-family: sans-serif;
     text-align: center; /* Center the text horizontally */
-    padding-top: 20rem;
-    padding-left: 0; /* Adjusted the padding-left to center the paragraph */
+    padding-top: 1rem; /* Adjusted the padding-top for spacing */
     color: var(--white-color);
 }
 
