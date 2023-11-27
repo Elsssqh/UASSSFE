@@ -1,0 +1,222 @@
+<html lang="en">
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ng e-Asdos Bookstore</title>
+    <link rel="stylesheet" type="text/css" href="home.css">
+    <script src="https://kit.fontawesome.com/8f441d49ca.js" crossorigin="anonymous"></script>
+
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand " href="#">NG e-Asdos BookStore</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="navbar-nav ms-auto">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="landing.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#about">About</a>
+                        </li>
+                        <li class="nav-item-middleboo">
+                            <a class="nav-link active" aria-current="page" href="books.html">Our Books</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link active" aria-current="page" href="search.html">Search</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link active" aria-current="page" href="cart.html">Trolley</a>
+                        </li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="listofpaid">History</a>
+                        </li>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">PAY NOW</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" id="OkPayment">OK PAYMENT</button>
+        </div>
+      </div>
+    </div>
+  </div>
+                  <!-- Tambahin logo -->
+                </ul>
+              </div>
+            </nav>
+          </div>
+          
+        </div>
+      </div>
+    </header>
+    <div id="cartItems">
+        <div class="container mt-4 rounded">
+            <h2>Your Shopping Cart</h2>
+            <table id="cartTable" class="table">
+              <thead>
+                <tr >
+                  <th class="p-2">Title</th>
+                  <th class="p-2">Price</th>
+                  <th class="p-2">Quantity</th>
+                  <th class="p-2">Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- Cart items will be added here dynamically -->
+                <tfoot>
+                    <tr>
+                      <td colspan="3" class="text-end">Total Price:</td>
+                      <td id="totalPrice"></td>
+                    </tr>
+                  </tfoot>
+              </tbody>
+            </table>
+            <div class="text-end mt-3">
+                <button id="payButton" class="btn btn-primary rounded" data-bs-toggle="modal" data-bs-target="#exampleModal">Proceed to Payment</button>
+              </div>
+          </div>
+          
+    </div>
+    <script>
+        // Ini untuk ngecek ada gak data di local storanget, kalo ada, tampilin cartnya
+        function displayCart() {
+      let cart = JSON.parse(localStorage.getItem("cart")) || [];
+      let cartTableBody = document.querySelector("#cartTable tbody");
+      let totalPriceElement = document.getElementById("totalPrice");
+      cartTableBody.innerHTML = ""; // Clear the cart table body
+      let total = 0;
+
+      if (cart.length === 0) {
+        cartTableBody.innerHTML = "<tr><td colspan='4' class='text-center'>Your cart is empty.</td></tr>";
+      } else {
+        cart.forEach((item, index) => {
+          let row = cartTableBody.insertRow();
+          let price = item.price * item.quantity;
+          total += price;
+          row.innerHTML = `
+            <td><p class="ms-2 mb-0">${item.title}</p></td>
+            <td><p class="ms-2 mb-0">$${item.price.toFixed(2)}</p></td>
+            <td>
+              <button onclick="decreaseFromCart(${index})" class="btn btn-secondary btn-sm m-0 p-1 ps-3 pe-3 rounded h-auto">-</button>
+              <span class="ms-2">${item.quantity}</span>
+              <button onclick="addToCart(${index})" class="btn btn-secondary btn-sm m-0 p-1 ps-3 pe-3 rounded h-auto">+</button>
+            </td>
+            <td><button onclick="removeFromCart(${index})" class="btn btn-danger rounded m-0 p-2 h-auto">Delete</button></td>
+          `;
+        });
+      }
+
+      totalPriceElement.textContent = `$${total.toFixed(2)}`; // Update total price
+    }
+        // Ini function untuk ngedelete data
+        function removeFromCart(index) {
+          let cart = JSON.parse(localStorage.getItem("cart")) || [];
+          cart.splice(index, 1); // Remove the item at the specified index
+          localStorage.setItem("cart", JSON.stringify(cart)); // Update the cart in local storage
+          displayCart(); // Refresh the cart display
+        }
+    
+        function addToCart(index) {
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+  if (cart[index]) {
+    cart[index].quantity += 1; // Increase the quantity
+  }
+  localStorage.setItem("cart", JSON.stringify(cart)); // Update local storage
+  displayCart(); // Refresh the cart display
+}
+
+function decreaseFromCart(index) {
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+  if (cart[index] && cart[index].quantity > 1) {
+    cart[index].quantity -= 1; // Decrease the quantity
+  } else {
+    cart.splice(index, 1); // If quantity is 1, remove the item
+  }
+  localStorage.setItem("cart", JSON.stringify(cart)); // Update local storage
+  displayCart(); // Refresh the cart display
+}
+        window.onload = displayCart;
+
+        document.getElementById('payButton').addEventListener('click', ()=>{
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const modalBody = document.querySelector('#exampleModal .modal-body');
+    modalBody.innerHTML = ''; // Clear the modal body content
+
+    let total = 0;
+    if (cart.length === 0) {
+        modalBody.innerHTML = '<p>Your cart is empty.</p>';
+    } else {
+        const listGroup = document.createElement('ul');
+        listGroup.className = 'list-group';
+
+        cart.forEach(item => {
+            total += item.price * item.quantity;
+            const listItem = document.createElement('li');
+            listItem.className = 'list-group-item';
+            listItem.innerHTML = `${item.title} - $${(item.price * item.quantity).toFixed(2)}`;
+            listGroup.appendChild(listItem);
+        });
+
+        const totalItem = document.createElement('li');
+        totalItem.className = 'list-group-item list-group-item-dark';
+        totalItem.textContent = `Total Price: $${total.toFixed(2)}`;
+        listGroup.appendChild(totalItem);
+
+        modalBody.appendChild(listGroup);
+    }
+        })
+
+        document.getElementById('OkPayment').addEventListener('click', () => {
+  const cart = JSON.parse(localStorage.getItem('cart')) || [];
+  const purchasedBooks = JSON.parse(localStorage.getItem('purchasedBooks')) || [];
+  
+  // Add the items from the cart to the purchasedBooks array
+  cart.forEach(item => {
+    purchasedBooks.push(item);
+  });
+
+  // Save the newly bought books to local storage
+  localStorage.setItem('purchasedBooks', JSON.stringify(purchasedBooks));
+
+  // Clear the current cart
+  localStorage.removeItem('cart');
+
+  // Optionally, confirm to the user that payment was successful
+  Swal.fire({
+    title: 'Success!',
+    text: 'Your payment has been processed.',
+    icon: 'success',
+    confirmButtonText: 'OK'
+  }).then((result) => {
+    if (result.isConfirmed) {
+      // Close the modal and refresh the page or navigate away
+      bootstrap.Modal.getInstance(document.getElementById('exampleModal')).hide();
+      displayCart(); // Refresh the cart to show it's now empty
+    }
+  });
+});
+      </script>
+    </body>
+    </html>
+  </body>
+</html>
