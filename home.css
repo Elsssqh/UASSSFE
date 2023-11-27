@@ -10,9 +10,9 @@
     --header-height: 3rem;
 
     /*===== Color Palette =====*/
-    --first-color: #fcb7a4;
-    --second-color: #c18957;
-    --third-color: #a86f3e; 
+    --first-color: rgb(246, 164, 252);
+    --second-color: #c157aa;
+    --third-color: #a83e91; 
     --white-color: #FCF8F8;
     
     /*===== Font and typography =====*/
@@ -41,35 +41,34 @@ h1 {
     background-repeat: no-repeat;
     background-position: right top;
 }
+
 .navbar-brand {
     font-family: 'Courgette', sans-serif;
     color: var(--white-color);
-    background-color: transparent; /* Set the initial background color to transparent */
-    border: 2px solid transparent; /* Add a default transparent outline */
+    margin: 0 10px; /* Add margin to create spacing between navbar buttons */
 }
 
-/* Set the background color of the button in the navbar */
 .navbar-brand:hover {
-    background-color: white;
     border: 2px solid var(--white-color);
     border-radius: 20px;
-    padding: 5px 15px; /* Adjust padding as needed */
+    color: var(--white-color);
+    transform: scale(1.1); /* Enlarge the button on hover */
+    transition: transform 0.3s ease; /* Add a smooth transition effect */
 }
 
 .navbar-nav {
     font-family: 'Courgette', sans-serif;
     color: var(--white-color);
-    background-color: transparent; /* Set the initial background color to transparent */
-    border: 2px solid white; 
+    background-color: rgba(255, 255, 255, 0.3); /* Set the initial background color to transparent white (30% opacity) */
+    border: 2px solid transparent; /* Add a default transparent outline */
     border-radius: 50px;
-    justify-content: space-between;
+    transition: background-color 0.3s ease; /* Add a smooth transition effect for the background color */
 }
 
-/* Set the background color of the navbar button when hovered */
 .navbar-nav:hover {
-    background-color: white;
-    border: 2px solid white;
-    border-radius: 50px;
+    background-color: var(--white-color); /* Set the background color to opaque white on hover */
+    border: 2px solid var(--white-color); 
+    border-radius: 50px; /* Ensure border-radius is set in both normal and hover states */
 }
 
 .nav-item {
