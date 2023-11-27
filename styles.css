@@ -1,13 +1,13 @@
 body {
     font-family: 'Courgette', sans-serif;
-    background-color: #f4f4f4;
+    background-color: #5e174e;
 }
 
 .container {
     max-width: 900px;
     margin: 50px auto;
     padding: 20px;
-    background-color: #fff;
+    background-color: #603657;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -17,6 +17,13 @@ header {
     color: white;
     padding: 10px;
     text-align: center;
+}
+
+h1 {
+    font-family: 'Courgette', sans-serif;
+    text-align: center; /* Center the text horizontally */
+    padding-top: 5rem;
+    color: white;
 }
 
 main {
