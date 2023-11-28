@@ -5,8 +5,8 @@ angular.module('bookApp', [])
         $scope.books = [];
         $scope.selectedBook = null;
 
-        $http.get('https://www.googleapis.com/books/v1/volumes?q=novel&langRestrict=en&maxResults=30&key=AIzaSyCvJYVNcx7FGTjOkeOqgHNrzKB3Y7F5ulU')
-            .then(function (response) {
+        
+        $http.get('https://www.googleapis.com/books/v1/volumes?q=cartoon%20novel&langRestrict=en&maxResults=30&key=AIzaSyCvJYVNcx7FGTjOkeOqgHNrzKB3Y7F5ulU') .then(function (response) {
                 console.log('API Response:', response.data);
 
                 if (response.data.items) {
