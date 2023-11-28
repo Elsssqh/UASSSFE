@@ -10,6 +10,7 @@
         <script src="https://kit.fontawesome.com/8f441d49ca.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <header class="sticky">
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
             <a class="navbar-brand " href="#">NG e-Asdos BookStore</a>
@@ -39,7 +40,9 @@
             </div>
         </div>
     </nav>
-m
+</header>
+
+    <section class="search" id="search">
     <div class="container">
         <form id="search-form">
             <input type="text" id="search-input" placeholder="Search...">
@@ -50,7 +53,8 @@ m
                 <option value="author">Author</option>
                 <option value="publisher">Publisher</option>
             </select>
-        </form>
+        
+    </section>
         <br>
         <center><button onclick="searchBooks()">Search</button></center>
         <ul id="bookList">
@@ -58,6 +62,7 @@ m
             <!-- Book items will be displayed here -->
         </ul>
     </div>
+</form>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="search.js"></script>
 </body>
