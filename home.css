@@ -129,3 +129,93 @@ warna {
 span {
     color: var(--white-color);
 }
+
+
+
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#bookshelf {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.book {
+    border: 1px solid #ddd;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    width: 150px;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.book:hover {
+    transform: scale(1.1);
+}
+
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.overlay img {
+    max-width: 100%;
+    max-height: 300px;
+}
+
+section.buku {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+
+    background-image: url('asset/background\ \(2\).jpg') !important;
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: cover;
+}
+
+.overlay-content p {
+    font-family: var(--head-font); /* Apply sans-serif font to overlay description */
+    color: var(--white-color);
+}
+
+.book {
+    border: 1px transparent;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    width: 150px;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+    font-family: var(--head-font); /* Apply sans-serif font to book description */
+    color: var(--white-color);
+}
+
+.book h3 {
+    font-size: 14px; /* Adjust the font size to your preference */
+    margin-top: 5px; /* Optional: Add margin to separate title from other elements */
+}
