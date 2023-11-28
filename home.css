@@ -81,17 +81,20 @@ h1 {
     border: 2px solid transparent; 
     border-radius: 50px;
     transition: background-color 0.3s ease; 
-    padding-right:20rem;
+   
+    
 }
 
 .navbar-nav:hover {
     border: 2px solid transparent;
     border-radius: 50px;
+    
 }
 
 .nav-item {
     color: var(--white-color);
-    margin : 0 20px;
+    margin : 0 30px;
+    padding-left:20px;
    
 }
 
@@ -99,7 +102,8 @@ h1 {
     background-color: rgba(255, 255, 255, 0.3); 
     transition: background-color 0.3s ease; 
     border-radius: 50px;
-    margin-left: 20px;
+    margin-left: 10px;
+    
      transform: scale(1.1); 
     transition: transform 0.3s ease; 
     
