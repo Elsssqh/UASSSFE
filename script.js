@@ -1,46 +1,38 @@
-const trolleyItems = [];
+// script.js
 
-function updateTrolley() {
-    const trolleyItemsList = document.getElementById('trolleyItems');
-    const totalPriceElement = document.getElementById('totalPrice');
+angular.module('bookApp', [])
+    .controller('TrolleyController', function ($scope) {
+        // Initialize trolleyItems and totalPrice
+        $scope.trolleyItems = [];
+        $scope.totalPrice = 0;
 
-    // Clear previous items
-    trolleyItemsList.innerHTML = '';
+        // Function to add a book to the trolley
+        $scope.addToTrolley = function (book) {
+            // Check if the book is already in the trolley
+            var index = $scope.trolleyItems.findIndex(item => item.title === book.title);
 
-    // Populate trolley items
-    trolleyItems.forEach(item => {
-        const div = document.createElement('div');
-        div.textContent = `${item.title} - $${item.price}`;
-        trolleyItemsList.appendChild(div);
+            if (index === -1) {
+                // If not, add it to the trolley
+                $scope.trolleyItems.push({
+                    title: book.title,
+                    quantity: 1,  // Initial quantity is 1
+                    price: book.price  // Assuming 'price' is the property from the API
+                });
+            } else {
+                // If yes, increase the quantity
+                $scope.trolleyItems[index].quantity++;
+            }
+
+            // Update the total price
+            $scope.totalPrice += book.price;
+        };
+
+        // Function to remove a book from the trolley
+        $scope.removeFromTrolley = function (index) {
+            // Subtract the price based on the quantity
+            $scope.totalPrice -= $scope.trolleyItems[index].price * $scope.trolleyItems[index].quantity;
+
+            // Remove the item from the trolley
+            $scope.trolleyItems.splice(index, 1);
+        };
     });
-
-    // Calculate and display total price
-    const totalPrice = trolleyItems.reduce((total, item) => total + item.price, 0);
-    totalPriceElement.textContent = totalPrice;
-}
-
-document.querySelectorAll('.remove-item').forEach(function (removeBtn) {
-    removeBtn.addEventListener('click', function () {
-        const itemIndex = Array.from(this.parentElement.parentElement.children).indexOf(this.parentElement);
-        trolleyItems.splice(itemIndex, 1);
-        updateTrolley();
-    });
-});
-
-// Dummy book data (replace with your actual data)
-const books = [
-    { id: 1, title: 'Book 1', author: 'Author 1', price: 10 },
-    { id: 2, title: 'Book 2', author: 'Author 2', price: 15 },
-    // Add more books as needed
-];
-
-function addToTrolley(bookId) {
-    const book = books.find(b => b.id === bookId);
-    if (book) {
-        trolleyItems.push(book);
-        updateTrolley();
-    }
-}
-
-// Initial update to display total price
-updateTrolley();

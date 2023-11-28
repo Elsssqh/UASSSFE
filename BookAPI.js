@@ -1,12 +1,13 @@
 // script-angular.js
-// APIKEY : AIzaSyCvJYVNcx7FGTjOkeOqgHNrzKB3Y7F5ulU
+
 angular.module('bookApp', [])
     .controller('BookController', function ($scope, $http) {
         $scope.books = [];
         $scope.selectedBook = null;
 
-        
-        $http.get('https://www.googleapis.com/books/v1/volumes?q=cartoon%20novel&langRestrict=en&maxResults=30&key=AIzaSyCvJYVNcx7FGTjOkeOqgHNrzKB3Y7F5ulU') .then(function (response) {
+        // Fetch books from the API
+        $http.get('https://www.googleapis.com/books/v1/volumes?q=cartoon%20novel&langRestrict=en&maxResults=30&key=AIzaSyCvJYVNcx7FGTjOkeOqgHNrzKB3Y7F5ulU')
+            .then(function (response) {
                 console.log('API Response:', response.data);
 
                 if (response.data.items) {
@@ -36,6 +37,9 @@ angular.module('bookApp', [])
 
         $scope.addToTrolley = function (book) {
             // Implement logic to add the book to the trolley
+            // For demonstration, I'm using an array to store trolley items
+            $scope.trolleyItems = $scope.trolleyItems || [];
+            $scope.trolleyItems.push(book);
             console.log('Added to Trolley:', book);
             alert('Book added to Trolley!');
         };
