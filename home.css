@@ -59,7 +59,7 @@ h1 {
 
 .navbar-brand {
     font-family: 'Courgette', sans-serif;
-    color: var(--white-color);
+    color: var(--white-color)!important; 
     margin: 0 20px; 
 
 }
@@ -79,7 +79,6 @@ h1 {
     border: 2px solid transparent; 
     border-radius: 50px;
     transition: background-color 0.3s ease; 
-    padding-right:10rem;
     
 }
 
@@ -182,18 +181,6 @@ body {
     max-height: 300px;
 }
 
-section.buku {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 3rem;
-
-    background-image: url('asset/background\ \(2\).jpg') !important;
-    background-repeat: no-repeat;
-    background-position: right top;
-    background-size: cover;
-}
 
 .overlay-content p {
     font-family: var(--head-font); /* Apply sans-serif font to overlay description */
