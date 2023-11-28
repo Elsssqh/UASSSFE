@@ -95,17 +95,29 @@ body {
     color: var(--white-color);
 }
 
-.cart-items {
-    display: flex;
-    justify-content: space-between;
+/* ... (existing CSS code) ... */
+.trolley {
+    background-color: #fff;
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.trolley h2 {
+    font-size: 1.2em;
+    margin-bottom: 8px;
+}
+
+#trolleyItems {
+    list-style: none;
     padding: 10px;
-    border-bottom: 1px solid #ccc;
 }
-.remove-item {
-    cursor: pointer;
-    color: red;
+
+#trolleyItems div {
+    margin-bottom: 8px;
 }
-.total-price {
+
+#totalPrice {
     font-weight: bold;
-    padding: 10px;
 }
