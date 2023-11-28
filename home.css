@@ -143,7 +143,7 @@ body {
 }
 
 .book {
-    border: 1px solid #ddd;
+    border: 1px solid rgb(255, 255, 255, 0.5);
     margin: 10px;
     padding: 10px;
     text-align: center;
@@ -170,7 +170,7 @@ body {
 }
 
 .overlay-content {
-    background-color: #fff;
+    background-color: rgb(255, 255, 255, 0.5);
     padding: 20px;
     border-radius: 5px;
     text-align: center;
@@ -202,4 +202,15 @@ body {
 .book h3 {
     font-size: 14px; /* Adjust the font size to your preference */
     margin-top: 5px; /* Optional: Add margin to separate title from other elements */
+}
+
+.info-container img {
+    max-width: 25px; /* Atur lebar maksimum */
+    max-height: 25px; /* Atur tinggi maksimum */
+    border-radius: 50%; /* Untuk membuat logo memiliki sudut yang bulat (optional) */
+    color: var(--white-color);
+}
+
+.info-container alt {
+    color: var(--white-color);
 }
