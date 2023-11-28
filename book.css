@@ -23,17 +23,12 @@
 }
 
 header.sticky {
-    position: fixed;
-    width: 1000px;
+    position: flex;
+    width: 100%;
     height: 60px;
-    padding: 0 100px;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: all .45s ease;
+    color: white;
+    text-align: center;
 }
-
 
 body {
     font-family: 'Arial', sans-serif;
