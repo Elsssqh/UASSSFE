@@ -174,7 +174,7 @@ section.buku {
 
 .add-to-trolley button {
     padding: 10px 20px;
-    background-color: #4caf50;
+    background-color: rgb(170, 76, 175);
     color: #fff;
     border: none;
     border-radius: 4px;
@@ -182,7 +182,7 @@ section.buku {
 }
 
 .add-to-trolley button:hover {
-    background-color: #45a049;
+    background-color:  rgb(170, 76, 175);
 }
 
 .book h3 {
