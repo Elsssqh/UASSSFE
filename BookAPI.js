@@ -34,6 +34,12 @@ angular.module('bookApp', [])
             document.getElementById('overlay').style.display = 'flex';
         };
 
+        $scope.addToTrolley = function (book) {
+            // Implement logic to add the book to the trolley
+            console.log('Added to Trolley:', book);
+            alert('Book added to Trolley!');
+        };
+
         $scope.hideBookDetails = function () {
             $scope.selectedBook = null;
             document.getElementById('overlay').style.display = 'none';
