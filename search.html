@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"ng-app="bookApp">
     <head>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
             integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
@@ -27,7 +27,7 @@
                             <a class="nav-link active" aria-current="page" href="#about">About</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="books.html">Our Books</a>
+                            <a class="nav-link active" aria-current="page" href="ourBooks.html">Our Books</a>
                         </li>
                         <li class="nav-item ">
                             <a class="nav-link active" aria-current="page" href="search.html">Search</a>
@@ -54,9 +54,11 @@
         <br>
         <center><button onclick="searchBooks()">Search</button></center>
         <ul id="bookList">
+            
             <!-- Book items will be displayed here -->
         </ul>
     </div>
-    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="search.js"></script>
 </body>
 </html>
