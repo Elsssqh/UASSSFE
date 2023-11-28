@@ -97,3 +97,16 @@ h1 {
 .btn {
     color: var(--white-color);
 }
+
+footer {
+    color: var(--third-color);
+    text-align: center;
+    background-image: url('asset/background\ \(2\).jpg');
+    background: linear-gradient(to bottom,  rgb(11, 2, 10)) 30%,  rgb(211, 115, 196) 200%;
+    padding: 1.2rem;
+    overflow: hidden;
+}
+
+warna {
+    color: var(--white-color);
+}
