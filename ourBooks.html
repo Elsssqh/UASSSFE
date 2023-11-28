@@ -42,7 +42,6 @@
     </nav>
 </header>
 
-
 <section class="buku" id="buku">
 <body ng-controller="BookController">
 <div id="bookshelf" class="animated-bookshelf">
@@ -57,6 +56,21 @@
         <img ng-src="{{selectedBook.thumbnail}}" alt="{{selectedBook.title}} Cover">
         <h3>{{selectedBook.title}}</h3>
         <p>{{selectedBook.description}}</p>
+        <button ng-click="hideBookDetails()">Close</button>
+    </div>
+</div>
+
+<div id="overlay" class="overlay" ng-show="selectedBook">
+    <div class="overlay-content">
+        <img ng-src="{{selectedBook.thumbnail}}" alt="{{selectedBook.title}} Cover">
+        <h3>{{selectedBook.title}}</h3>
+        <p>{{selectedBook.description}}</p>
+
+        <!-- Add to Trolley button -->
+        <div class="add-to-trolley">
+            <button ng-click="addToTrolley(selectedBook)">Add to Trolley</button>
+        </div>
+
         <button ng-click="hideBookDetails()">Close</button>
     </div>
 </div>

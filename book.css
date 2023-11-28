@@ -168,6 +168,23 @@ section.buku {
     color: var(--white-color);
 }
 
+.add-to-trolley {
+    margin-top: 10px;
+}
+
+.add-to-trolley button {
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.add-to-trolley button:hover {
+    background-color: #45a049;
+}
+
 .book h3 {
     font-size: 14px; /* Adjust the font size to your preference */
     margin-top: 5px; /* Optional: Add margin to separate title from other elements */
