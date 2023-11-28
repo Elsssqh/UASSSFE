@@ -23,7 +23,7 @@
 }
 
 header.sticky {
-    position: auto;
+    position: flex;
     width: 100%;
     height: 60px;
     color: white;
@@ -67,20 +67,17 @@ body {
     border: 2px solid transparent; 
     border-radius: 50px;
     transition: background-color 0.3s ease; 
-   
-    
+    padding-right:10rem;
 }
 
 .navbar-nav:hover {
     border: 2px solid transparent;
     border-radius: 50px;
-    
 }
 
 .nav-item {
     color: var(--white-color);
     margin : 0 20px;
-   
 }
 
 .nav-item:hover{
