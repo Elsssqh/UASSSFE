@@ -37,11 +37,17 @@ body {
     background-position: right top;
     color: var(--white-color);
 }
+
 h1 {
     font-family: 'Courgette', sans-serif;
     text-align: center; /* Center the text horizontally */
     padding-top: 10rem;
     color: var(--white-color);
+}
+
+h3 {
+    font-family: 'Courgette', sans-serif;
+    text-align: center; /* Center the text horizontally */
 }
 
 .p {
@@ -230,4 +236,12 @@ body {
 
 .info-container alt {
     color: var(--white-color);
+}
+
+span2 {
+    color: var(--first-color);
+}
+
+section.about {
+    padding-bottom: 20%;
 }
