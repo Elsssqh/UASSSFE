@@ -19,7 +19,9 @@ angular.module('bookApp', [])
                             title: item.volumeInfo.title || 'No Title',
                             authors: item.volumeInfo.authors || ['Unknown Author'],
                             description: truncatedDescription,
-                            thumbnail: item.volumeInfo.imageLinks ? item.volumeInfo.imageLinks.thumbnail : 'no-image.jpg'
+                            thumbnail: item.volumeInfo.imageLinks ? item.volumeInfo.imageLinks.thumbnail : 'no-image.jpg',
+                            price: item.saleInfo && item.saleInfo.listPrice && item.saleInfo.listPrice.amount ? item.saleInfo.listPrice.amount : 'Not available'
+   
                         };
                     });
                 } else {
