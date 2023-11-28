@@ -38,4 +38,5 @@ angular.module('bookApp', [])
             $scope.selectedBook = null;
             document.getElementById('overlay').style.display = 'none';
         };
-    });
+    }
+);
