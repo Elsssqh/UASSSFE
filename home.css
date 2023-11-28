@@ -26,6 +26,7 @@ header.sticky {
     position: fixed;
     width: 1000px;
     height: 60px;
+    padding: 100px 100px;
 
     display: flex;
     justify-content: space-between;
@@ -122,5 +123,9 @@ footer {
 }
 
 warna {
+    color: var(--white-color);
+}
+
+span {
     color: var(--white-color);
 }
