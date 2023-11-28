@@ -22,6 +22,17 @@
     --normal-font-size: .938rem;
 }
 
+header.sticky {
+    position: fixed;
+    width: 1000px;
+    height: 60px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all .45s ease;
+}
+
 body {
     background-image: url('asset/background\ \(2\).jpg');
     background-repeat: no-repeat;
