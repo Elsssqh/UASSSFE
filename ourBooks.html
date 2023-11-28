@@ -42,8 +42,9 @@
     </nav>
 </header>
 
-<body ng-controller="BookController">
 
+<section class="buku" id="buku">
+<body ng-controller="BookController">
 <div id="bookshelf" class="animated-bookshelf">
     <div ng-repeat="book in books" class="book" ng-click="showBookDetails(book)">
         <img ng-src="{{book.thumbnail}}" alt="{{book.title}} Cover">
@@ -62,6 +63,7 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
 <script src="BookAPI.js"></script>
+</section>
 
 </body>
 </html>
