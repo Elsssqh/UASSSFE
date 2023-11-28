@@ -23,14 +23,12 @@
 }
 
 header.sticky {
-    position: fixed;
-    width: 1000px;
+    position: flex;
+    width: 100%;
     height: 60px;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: all .45s ease;
+    color: white;
+    padding: 10px;
+    text-align: center;
 }
 
 body {
