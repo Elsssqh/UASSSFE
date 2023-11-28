@@ -115,11 +115,7 @@ main {
 
 button {
     padding: 10px 30px;
-<<<<<<< HEAD
-    background-color: #c42da3;
-=======
     background-color: #af4cac;
->>>>>>> 1f8a402a56a89f79f3c09d683e00374070ec8c05
     color: #fff;
     border: none;
     border-radius: 4px;
@@ -127,9 +123,5 @@ button {
 }
 
 button:hover {
-<<<<<<< HEAD
-    background-color: #c157aa;
-=======
     background-color: #af4cac;
->>>>>>> 1f8a402a56a89f79f3c09d683e00374070ec8c05
 }
