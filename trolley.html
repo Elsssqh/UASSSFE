@@ -44,26 +44,16 @@
     </header>
     
     <section class="items" id="items">
-        <div class="cart-items">
-        <span>Item 1</span>
-        <span class="remove-item">Remove</span>
-    </div>
-    <div class="cart-items">
-        <span>Item 2</span>
+        <div class="cart-items" id="trolleyItems">
+            <!--trolley items will be displayed here-->
         <span class="remove-item">Remove</span>
     </div>
     <div class="total-price">
-        Total Price: $200
+        Total Price: $<span id="totalPrice">0</span>
     </div>
 </section>
 
-    <script>
-        document.querySelectorAll('.remove-item').forEach(function(removeBtn) {
-            removeBtn.addEventListener('click', function() {
-                this.parentElement.remove();
-            });
-        });
-    </script>
+<script src="script.js"></script>
 
 </body>
 </html>
