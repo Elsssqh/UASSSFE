@@ -1,10 +1,8 @@
-
 // script-angular.js
 
 angular.module('bookApp', [])
     .controller('BookController', function ($scope, $http) {
         $scope.books = [];
-        $scope.selectedBook = null;
         $scope.searchQuery = '';
 
         $scope.searchBooks = function () {
@@ -36,15 +34,5 @@ angular.module('bookApp', [])
             } else {
                 console.warn('Empty search query.');
             }
-        };
-
-        $scope.showBookDetails = function (book) {
-            $scope.selectedBook = book;
-            document.getElementById('overlay').style.display = 'flex';
-        };
-
-        $scope.hideBookDetails = function () {
-            $scope.selectedBook = null;
-            document.getElementById('overlay').style.display = 'none';
         };
     });

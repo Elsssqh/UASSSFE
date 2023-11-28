@@ -59,7 +59,7 @@ h1 {
 
 .navbar-brand {
     font-family: 'Courgette', sans-serif;
-    color: var(--white-color);
+    color: var(--white-color)!important; 
     margin: 0 20px; 
 
 }
@@ -79,7 +79,6 @@ h1 {
     border: 2px solid transparent; 
     border-radius: 50px;
     transition: background-color 0.3s ease; 
-    padding-right:10rem;
     
 }
 
@@ -161,7 +160,7 @@ body {
 }
 
 .book {
-    border: 1px solid #ddd;
+    border: 1px solid rgb(255, 255, 255, 0.5);
     margin: 10px;
     padding: 10px;
     text-align: center;
@@ -188,7 +187,7 @@ body {
 }
 
 .overlay-content {
-    background-color: #fff;
+    background-color: rgb(255, 255, 255, 0.5);
     padding: 20px;
     border-radius: 5px;
     text-align: center;
@@ -199,18 +198,6 @@ body {
     max-height: 300px;
 }
 
-section.buku {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 3rem;
-
-    background-image: url('asset/background\ \(2\).jpg') !important;
-    background-repeat: no-repeat;
-    background-position: right top;
-    background-size: cover;
-}
 
 .overlay-content p {
     font-family: var(--head-font); /* Apply sans-serif font to overlay description */
@@ -232,4 +219,15 @@ section.buku {
 .book h3 {
     font-size: 14px; /* Adjust the font size to your preference */
     margin-top: 5px; /* Optional: Add margin to separate title from other elements */
+}
+
+.info-container img {
+    max-width: 25px; /* Atur lebar maksimum */
+    max-height: 25px; /* Atur tinggi maksimum */
+    border-radius: 50%; /* Untuk membuat logo memiliki sudut yang bulat (optional) */
+    color: var(--white-color);
+}
+
+.info-container alt {
+    color: var(--white-color);
 }
