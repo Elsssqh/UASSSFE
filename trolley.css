@@ -60,6 +60,16 @@ body {
     transition: transform 0.3s ease; 
 }
 
+.nav-brand:hover{
+    background-color: rgba(255, 255, 255, 0.3); 
+    transition: background-color 0.3s ease; 
+    border-radius: 50px;
+    margin-left: 10px;
+     transform: scale(1.1); 
+    transition: transform 0.3s ease; 
+}
+
+
 .navbar-nav {
     font-family: 'Courgette', sans-serif;
     color: var(--white-color);
@@ -67,7 +77,7 @@ body {
     border: 2px solid transparent; 
     border-radius: 50px;
     transition: background-color 0.3s ease; 
-    padding-right:10rem;
+    
 }
 
 .navbar-nav:hover {

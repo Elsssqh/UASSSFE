@@ -215,7 +215,7 @@ body {
 
 
 .overlay-content p {
-    font-family: var(--head-font); /* Apply sans-serif font to overlay description */
+    font-family: var(--head-font); 
     color: var(--white-color);
 }
 
@@ -227,19 +227,19 @@ body {
     width: 150px;
     transition: transform 0.3s ease-in-out;
     cursor: pointer;
-    font-family: var(--head-font); /* Apply sans-serif font to book description */
+    font-family: var(--head-font); 
     color: var(--white-color);
 }
 
 .book h3 {
-    font-size: 14px; /* Adjust the font size to your preference */
-    margin-top: 5px; /* Optional: Add margin to separate title from other elements */
+    font-size: 14px; 
+    margin-top: 5px; 
 }
 
 .info-container img {
-    max-width: 25px; /* Atur lebar maksimum */
-    max-height: 25px; /* Atur tinggi maksimum */
-    border-radius: 50%; /* Untuk membuat logo memiliki sudut yang bulat (optional) */
+    max-width: 25px; 
+    max-height: 25px; 
+    border-radius: 50%; 
     color: var(--white-color);
 }
 

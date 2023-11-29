@@ -71,7 +71,7 @@ header.sticky {
     border: 2px solid transparent; 
     border-radius: 50px;
     transition: background-color 0.3s ease; 
-    padding-right:10rem;
+    
 }
 
 .navbar-nav:hover {
@@ -115,7 +115,7 @@ main {
 
 button {
     padding: 10px 30px;
-    background-color: #af4cac;
+    background-color: #4caf50;
     color: #fff;
     border: none;
     border-radius: 4px;
@@ -123,5 +123,5 @@ button {
 }
 
 button:hover {
-    background-color: #af4cac;
+    background-color: #45a049;
 }
